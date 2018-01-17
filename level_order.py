@@ -5,7 +5,7 @@ def level_order_print(root):
    q = Queue()
    q.put(root)
    
-   while not q.emptry():
+   while not q.empty():
     level_nodes = q.size()
     while level_nodes:
       node = q.get()
