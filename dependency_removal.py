@@ -13,7 +13,7 @@ Class Node:
     self.edges= []
   
   def add_edge(self,node):
-    self.dge.append(node)
+    self.edges.append(node)
 
 resolved = []
 seen = []
