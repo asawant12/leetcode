@@ -1,6 +1,5 @@
 # code to print multiple valid combinations of paranthesis
 
-password="xyz"
 def print_brackets(number):
   if not number:
     return ''
@@ -14,3 +13,4 @@ def _print_brackets(inp,number,open,close):
     _print_brackets(inp+'}',number,open,close+1)
    if open < number:
     _print_brackets(inp+'{',number,open+1,close)
+q
