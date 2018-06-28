@@ -1,7 +1,5 @@
 # code to print multiple valid combinations of paranthesis
 
-#3rd change
-#2nd changes
 def print_brackets(number):
   if not number:
     return ''
