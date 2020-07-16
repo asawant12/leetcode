@@ -1,15 +1,16 @@
 # code to print multiple valid combinations of paranthesis
 
-def print_brackets(number):
-  if not number:
-    return ''
-  return _print_brackets('',number,0,0)
+class Solution(object):
+    def generateParenthesis(self, N):
+        ans = []
+        def backtrack(S = '', left = 0, right = 0):
+            if len(S) == 2 * N:
+                ans.append(S)
+                return
+            if left < N:
+                backtrack(S+'(', left+1, right)
+            if right < left:
+                backtrack(S+')', left, right+1)
 
-def _print_brackets(inp,number,open,close):
-  if close == number:
-    print(inp)
-    return
-  if open > close:
-    _print_brackets(inp+'}',number,open,close+1)
-   if open < number:
-    _print_brackets(inp+'{',number,open+1,close)
+        backtrack()
+        return ans
