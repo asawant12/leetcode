@@ -1,7 +1,7 @@
 # code to print multiple valid combinations of paranthesis
 
 class Solution(object):
-    def backtrack(S = '', left = 0, right = 0):
+    def backtrack(N, S = '', left = 0, right = 0):
         if len(S) == 2 * N:
             ans.append(S)
             return
@@ -11,7 +11,5 @@ class Solution(object):
            self.backtrack(S+')', left, right+1)
     def generateParenthesis(self, N):
         ans = []
-        self.backtrack()
-
-        
+        self.backtrack(N)
         return ans
