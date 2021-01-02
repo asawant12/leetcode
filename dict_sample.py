@@ -33,3 +33,13 @@ for key_label in key_bunch.values():
 
 for key_label,key_val in key_bunch.items():
   print(key_label+" " + key_val)
+
+roll_numbers = {}
+roll_numbers[1] = {"name":"Neeraj","marks": 20}
+roll_numbers[2] = "Prasad"
+roll_numbers[3] = "Shourya"
+roll_numbers[4] = "Omkar"
+
+print(roll_numbers)
+roll_numbers[2] = "Piyush"
+print(roll_numbers)
