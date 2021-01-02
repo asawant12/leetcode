@@ -43,3 +43,33 @@ roll_numbers[4] = "Omkar"
 print(roll_numbers)
 roll_numbers[2] = "Piyush"
 print(roll_numbers)
+
+
+# ######
+# output::
+# thi is not safe key
+# open the safe
+# key6
+# Enter your order:2
+# You ordered:vadapav
+# home_key
+# 2nd_home_key
+# bike_key
+# car_key
+# shop_key
+# safe_key
+# key1
+# key2
+# key3
+# key4
+# key5
+# key6
+# home_key key1
+# 2nd_home_key key2
+# bike_key key3
+# car_key key4
+# shop_key key5
+# safe_key key6
+# {1: {'name': 'Neeraj', 'marks': 20}, 2: 'Prasad', 3: 'Shourya', 4: 'Omkar'}
+# {1: {'name': 'Neeraj', 'marks': 20}, 2: 'Piyush', 3: 'Shourya', 4: 'Omkar'}
+#      
