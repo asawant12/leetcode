@@ -5,40 +5,20 @@ class Solution(object):
         :type numRows: int
         :rtype: str
         """
-        index=0
-        matrix = []
-        fin_answer=""
-        row_str=""
-        for row_index in range(numRows):
-            matrix.append([])
-
-        col_index = 0
-        letter_index = 0
-        while index < len(s):
-            row_index = 0
-            if letter_index == 0:
-                while row_index < numRows:
-                    matrix[row_index].append(s[index])
-                    row_index += 1
-                    index += 1
-                    if index >= len(s):
-                        break
-                col_index += 1
-                letter_index = numRows-2
+        result = [""] * numRows
+        rowNumber = 0
+        direction = 1      
+ 
+        for i in range(len(s)):  #looping through each element
+            result[rowNumber] = result[rowNumber] + s[i]
+            if rowNumber < numRows -1 and direction == 1:
+                rowNumber += 1
+            elif rowNumber > 0 and direction == -1:
+                rowNumber -= 1
             else:
-                while row_index < numRows:
-                    if row_index == letter_index:
-                        matrix[row_index].append(s[index])
-                        index += 1
-                        if index >= len(s):
-                            break
-                    else:
-                        matrix[row_index].append("")
-                    row_index += 1
-                col_index += 1
-                letter_index -= 1
-        for rows in matrix:
-           row_str = "".join(rows)
-           fin_answer +=  row_str
-        return fin_answer
-            
+                direction *= -1
+                rowNumber += direction
+        return ''.join(result)
+
+s = Solution()
+print(s.convert("PAYPALISHIRING",3))
