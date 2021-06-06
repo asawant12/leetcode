@@ -22,9 +22,13 @@ def test_matrix(matrix):
   col_index = len(matrix)-1
   col = -1
   while col_index >= 0:
+    found_one = False                
     for row_index in range(len(matrix)):
       if matrix[row_index][col_index] == 1:
           col = col_index + 1
+          found_one = True
+          break
+    if not found_one:
           break
     col_index -= 1
   return col
