@@ -2,13 +2,11 @@
 
 class Solution:
     def substr_is_unique(self, substr) -> bool:
-        cnt_dt = {}
-        for item in substr:
-            if item in cnt_dt:
-                return False
-            else:
-                cnt_dt[item]=1
-        return True
+        set_substr = set(substr)
+        if len(set_substr) == len(substr):
+            return True
+        else:
+            return False
     
     def numKLenSubstrNoRepeats(self, s: str, k: int) -> int:
         s_list = list(s)
