@@ -8,7 +8,7 @@ def find_closest(root, target):
     closest = root.val
   if target < root.val:
     find_closest(root.left, target)
-  elif target > root.val::
+  elif target > root.val:
     find_closest(root.right, target)
   else:
     closest = root.val
