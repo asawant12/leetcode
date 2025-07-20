@@ -1,5 +1,4 @@
-
-# Online Python - IDE, Editor, Compiler, Interpreter
+# code to detect cycle in grap
 from collections import defaultdict
 edges = [[0, 1], [0, 2], [1, 2], [2, 0]]
 
